@@ -4,35 +4,35 @@
 // Neither sum should include the current index. Please return 'null' in the absence of any solution.
 
 function BalancedIndex(array) {
-    //Type your code here
+  //Type your code here
 
-    // -------------- SECOND SOLUTION O(n) --------------
-    //Declare variables.
-    let rightSum = 0;
-    let leftSum = 0;
-    // //loop over the array.
+  // -------------- FIRST SOLUTION O(n) --------------
+  //Declare variables.
+  let rightSum = 0;
+  let leftSum = 0;
+  // //loop over the array.
 
-    for (let i = 0; i < array.length; i++) {
-        rightSum += array[i]
+  for (let i = 0; i < array.length; i++) {
+    rightSum += array[i]
+  }
+  // //loop over the array.
+  for (let i = 0; i < array.length; i++) {
+    //incrementing leftSum variable if condition is true.
+    if (i > 0) {
+      leftSum += array[i - 1];
     }
-    // //loop over the array.
-    for (let i = 0; i < array.length; i++) {
-        //incrementing leftSum variable if condition is true.
-        if (i > 0) {
-            leftSum += array[i - 1];
-        }
-        //incrementing rightSum variable. 
-        rightSum -= array[i];
+    //incrementing rightSum variable. 
+    rightSum -= array[i];
 
-        //check if two sums are equal.
-        if (leftSum === rightSum) {
-            return i;
-        }
+    //check if two sums are equal.
+    if (leftSum === rightSum) {
+      return i;
     }
-    return null;
+  }
+  return null;
 
 }
-//---------------- FIRST SOLUTION WITH O(n^2) -----------------
+//---------------- SECOND SOLUTION WITH O(n^2) -----------------
     // //Declare variables
     // let leftSum = 0;
     // let rightSum;
