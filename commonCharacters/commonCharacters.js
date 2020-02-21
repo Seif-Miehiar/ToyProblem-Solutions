@@ -17,7 +17,6 @@ commonCharacters = function (string1, string2) {
 
   //looping over first array.
   for (let i = 0; i < stringOne.length; i++) {
-
     //looping over second array.
     for (let j = 0; j < stringTwo.length; j++) {
 
