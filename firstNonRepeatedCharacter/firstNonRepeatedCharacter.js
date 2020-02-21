@@ -4,6 +4,7 @@
 function firstNonRepeatedCharacter(string) {
 	//declare an empty object variable
 	let storage = {};
+
 	//splitting the string inot an array each character will be an value in one index
 	let array = string.split('');
 
