@@ -21,10 +21,10 @@ commonCharacters = function (string1, string2) {
     for (let j = 0; j < stringTwo.length; j++) {
 
       //checking if each element from array one if it is included in array 2.
-      if (stringOne[i] === stringTwo[j]) {
+      if (stringOne[i] === stringTwo[j] && stringTwo[i] !== " ") {
 
         //adding the string with plus ooperator.
-        result += stringTwo[j];
+        result += stringTwo[i];
 
         //if yes then there is a common character and break to continue the loop over the other element.
         break;
