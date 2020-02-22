@@ -24,10 +24,14 @@
 // Note: Your solution may fail if you have a comment in your nthFibonacci function that contains the string literal “nthFibonacci” somewhere within it.
 
 nthFibonacci = function (n) {
+  //declare an array starting with 0 , 1 as fibonacci always starts with 0 & 1.
   let array = [0, 1];
+  //start looping from number 2 as the first 2 numbers are always the same.
   for (let i = 2; i < n + 1; i++) {
+    //pushing to the array with the same equation of the fibonacci.
     array.push(array[i - 1] + array[i - 2]);
   }
+  //return array.
   return array;
 
 }
