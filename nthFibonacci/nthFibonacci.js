@@ -24,5 +24,10 @@
 // Note: Your solution may fail if you have a comment in your nthFibonacci function that contains the string literal “nthFibonacci” somewhere within it.
 
 nthFibonacci = function (n) {
+  let array = [0, 1];
+  for (let i = 2; i < n + 1; i++) {
+    array.push(array[i - 1] + array[i - 2]);
+  }
+  return array;
 
 }
