@@ -15,15 +15,33 @@
 // NOTE: DO NOT use JavaScript’s built-in sorting function (Array.prototype.sort).
 
 var bubbleSort = function (array) {
+  //looping over the array.
   for (let i = 0; i < array.length; i++) {
+    //checking if the first element is greater than the one after.
     if (array[i] > array[i + 1] && array[i] !== array[i + 1]) {
+      //if yes we swap the elements
       let temp = array[i];
       array[i] = array[i + 1];
       array[i + 1] = temp;
+      //and then decrement i with - 2 to loop back again to a base index to check again so it can move the element to the begining of the array.
       i = i - 2;
     }
   }
+  //return the array/argument.
   return array;
 }
 
+//-------------------While Loop Answer------------------
+  // let i = 0;
+
+  // while (i < array.length) {
+  //   if (array[i] > array[i + 1] && array[i] !== array[i + 1]) {
+  //     let temp = array[i];
+  //     array[i] = array[i + 1];
+  //     array[i + 1] = temp;
+  //     i = i - 2;
+  //   }
+  //   i++
+  // }
+  // return array;
 
