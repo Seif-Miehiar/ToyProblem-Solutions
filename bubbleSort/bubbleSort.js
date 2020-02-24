@@ -15,26 +15,15 @@
 // NOTE: DO NOT use JavaScript’s built-in sorting function (Array.prototype.sort).
 
 var bubbleSort = function (array) {
-  let i = 0;
-  do {
-
-    let temp = array[i];
-    array[i] = array[i + 1];
-    array[i + 1] = temp;
-    i++;
-
-  } while (i < array.length && array[i] > array[i + 1]) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > array[i + 1] && array[i] !== array[i + 1]) {
+      let temp = array[i];
+      array[i] = array[i + 1];
+      array[i + 1] = temp;
+      i = i - 2;
+    }
   }
   return array;
 }
 
 
-  // for (let i = 0; i < array.length; i++) {
-  //   if (array[i] > array[i + 1] && array[i] !== array[i + 1]) {
-  //     let temp = array[i];
-  //     array[i] = array[i + 1];
-  //     array[i + 1] = temp;
-  //     i = i - 2;
-  //   }
-  // }
-  // return array;
