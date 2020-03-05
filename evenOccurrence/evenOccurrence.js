@@ -4,7 +4,7 @@
 //Return null if there are no even-occurrence items.
 
 function evenOccurrence(arr) {
-  //create an empty object to store elements of the array
+  //create an empty object to store elements of the array.
   let storage = {};
 
   //loop over the array.
